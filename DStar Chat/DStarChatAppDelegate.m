@@ -17,6 +17,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    DStarChatStreams *dscs = [[DStarChatStreams alloc] init];
+    [dscs connectToRemoteServer:nil];
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.raychev.DStar_Chat" in the user's Application Support directory.
@@ -180,4 +182,8 @@
     return NSTerminateNow;
 }
 
+-(IBAction)connect:(id)sender{
+    DStarChatStreams* s = [[DStarChatStreams alloc] init];
+    [s connectToRemoteServer:sender];
+}
 @end

@@ -12,8 +12,9 @@
 		B9BBBE7E178E943A00CFA800 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BBBE7D178E943A00CFA800 /* main.m */; };
 		B9BBBE82178E943A00CFA800 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9BBBE80178E943A00CFA800 /* Credits.rtf */; };
 		B9BBBE85178E943A00CFA800 /* DStarChatAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BBBE84178E943A00CFA800 /* DStarChatAppDelegate.m */; };
-		B9BBBE88178E943A00CFA800 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9BBBE86178E943A00CFA800 /* MainMenu.xib */; };
 		B9BBBE8B178E943A00CFA800 /* DStar_Chat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9BBBE89178E943A00CFA800 /* DStar_Chat.xcdatamodeld */; };
+		B9BBBE99178EA92800CFA800 /* DStarChatStreams.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BBBE98178EA92800CFA800 /* DStarChatStreams.m */; };
+		B9BBBE9B178F1C7300CFA800 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9BBBE9A178F1C7300CFA800 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +30,10 @@
 		B9BBBE81178E943A00CFA800 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		B9BBBE83178E943A00CFA800 /* DStarChatAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarChatAppDelegate.h; sourceTree = "<group>"; };
 		B9BBBE84178E943A00CFA800 /* DStarChatAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DStarChatAppDelegate.m; sourceTree = "<group>"; };
-		B9BBBE87178E943A00CFA800 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B9BBBE8A178E943A00CFA800 /* DStar_Chat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DStar_Chat.xcdatamodel; sourceTree = "<group>"; };
+		B9BBBE97178EA92800CFA800 /* DStarChatStreams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DStarChatStreams.h; sourceTree = "<group>"; };
+		B9BBBE98178EA92800CFA800 /* DStarChatStreams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DStarChatStreams.m; sourceTree = "<group>"; };
+		B9BBBE9A178F1C7300CFA800 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +89,11 @@
 			children = (
 				B9BBBE83178E943A00CFA800 /* DStarChatAppDelegate.h */,
 				B9BBBE84178E943A00CFA800 /* DStarChatAppDelegate.m */,
-				B9BBBE86178E943A00CFA800 /* MainMenu.xib */,
+				B9BBBE9A178F1C7300CFA800 /* MainMenu.xib */,
 				B9BBBE89178E943A00CFA800 /* DStar_Chat.xcdatamodeld */,
 				B9BBBE78178E943A00CFA800 /* Supporting Files */,
+				B9BBBE97178EA92800CFA800 /* DStarChatStreams.h */,
+				B9BBBE98178EA92800CFA800 /* DStarChatStreams.m */,
 			);
 			path = "DStar Chat";
 			sourceTree = "<group>";
@@ -159,7 +164,7 @@
 			files = (
 				B9BBBE7C178E943A00CFA800 /* InfoPlist.strings in Resources */,
 				B9BBBE82178E943A00CFA800 /* Credits.rtf in Resources */,
-				B9BBBE88178E943A00CFA800 /* MainMenu.xib in Resources */,
+				B9BBBE9B178F1C7300CFA800 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +178,7 @@
 				B9BBBE7E178E943A00CFA800 /* main.m in Sources */,
 				B9BBBE85178E943A00CFA800 /* DStarChatAppDelegate.m in Sources */,
 				B9BBBE8B178E943A00CFA800 /* DStar_Chat.xcdatamodeld in Sources */,
+				B9BBBE99178EA92800CFA800 /* DStarChatStreams.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,14 +199,6 @@
 				B9BBBE81178E943A00CFA800 /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		B9BBBE86178E943A00CFA800 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B9BBBE87178E943A00CFA800 /* en */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
