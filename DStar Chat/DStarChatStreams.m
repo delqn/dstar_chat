@@ -8,38 +8,28 @@
 
 #import "DStarChatStreams.h"
 
-CFReadStreamRef readStream;
-CFWriteStreamRef writeStream;
-
 NSInputStream *inputStream;
 NSOutputStream *outputStream;
 NSMutableData *dataBuffer;
 
 @implementation DStarChatStreams
 
+- (id)initWithTextView:(NSTextView*)textView{
+    self = [super init];
+    externalTextView = textView;
+    return self;
+}
+
 - (IBAction)connectToRemoteServer:(id)sender {
-    CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault,
-                                       (CFStringRef)@"http://127.0.0.1",
-                                       9000,
-                                       &readStream,
-                                       &writeStream);
-    
-    /*
-     NSInputStream *is = inputStream;
-     NSOutputStream *os = outputStream;
+    NSHost *host = [NSHost hostWithName:@"ref.d-rats.com"];
+    NSInputStream *is = inputStream;
+    NSOutputStream *os = outputStream;
     [NSStream getStreamsToHost:host
                           port:9000
                    inputStream:&is
                   outputStream:&os];
     inputStream = is;
     outputStream = os;
-     */
-    //OnlineSession *session = [OnlineSession initWithInputStream:is outputStream:os];
-    
-    if(!CFWriteStreamOpen(writeStream)) {
-        NSLog(@"Error, writeStream not open");
-        return;
-    }
     [self open];
     NSLog(@"Status of outputStream: %li", [outputStream streamStatus]);
     return;
@@ -47,8 +37,6 @@ NSMutableData *dataBuffer;
 
 - (void)open {
     NSLog(@"Opening streams.");
-    inputStream = (__bridge_transfer NSInputStream *)readStream;
-    outputStream = (__bridge_transfer NSOutputStream *)writeStream;
     [inputStream setDelegate:self];
     [outputStream setDelegate:self];
     //[inputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
@@ -71,9 +59,6 @@ NSMutableData *dataBuffer;
 }
 
 - (void)stream:(NSStream *)stream handleEvent:(NSStreamEvent)streamEvent {
-    NSLog(@"stream event %li", streamEvent);
-    NSLog(@"Stream triggered.");
-    /*
     switch(streamEvent) {
         case NSStreamEventHasSpaceAvailable: {
             if(stream == outputStream) {
@@ -101,12 +86,12 @@ NSMutableData *dataBuffer;
             break;
         }
     }
-     */
 }
 
 - (void)readIn:(NSString *)s {
     NSLog(@"Reading in the following:");
     NSLog(@"%@", s);
+    [externalTextView insertText:s];
 }
 
 - (void)writeOut:(NSString *)s {

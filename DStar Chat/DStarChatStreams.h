@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DStarChatStreams : NSObject <NSStreamDelegate>
+@interface DStarChatStreams: NSObject <NSStreamDelegate> {
+    @private
+    NSTextView *externalTextView;
+}
+
+- (id)initWithTextView:(NSTextView*)textView;
 - (void)open;
 - (void)close;
 - (void)stream:(NSStream *)stream handleEvent:(NSStreamEvent)event;

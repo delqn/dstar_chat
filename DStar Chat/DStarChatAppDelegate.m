@@ -17,8 +17,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    DStarChatStreams *dscs = [[DStarChatStreams alloc] init];
-    [dscs connectToRemoteServer:nil];
+    streamsObject = [[DStarChatStreams alloc] initWithTextView:self.textView];
+    [streamsObject connectToRemoteServer:nil];
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.raychev.DStar_Chat" in the user's Application Support directory.

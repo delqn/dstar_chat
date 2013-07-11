@@ -9,9 +9,13 @@
 #import <Cocoa/Cocoa.h>
 #import "DStarChatStreams.h"
 
-@interface DStarChatAppDelegate : NSObject <NSApplicationDelegate>
+@interface DStarChatAppDelegate : NSObject <NSApplicationDelegate>{
+    @private
+    DStarChatStreams *streamsObject;
+}
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSTextView *textView;
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
@@ -22,6 +26,5 @@
 - (IBAction)saveAction:(id)sender;
 
 - (IBAction)connect:(id)sender;
-
 
 @end
