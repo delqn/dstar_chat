@@ -18,6 +18,8 @@
 @property (assign) IBOutlet NSTextView *textView;
 @property (assign) IBOutlet NSTextField *hostName;
 @property (assign) IBOutlet NSTextField *portNumber;
+@property (assign) IBOutlet NSButton *connectButton;
+@property (assign) IBOutlet NSTextField *connectionStatus;
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

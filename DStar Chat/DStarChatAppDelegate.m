@@ -183,6 +183,8 @@
 
 -(IBAction)connect:(id)sender{
     streamsObject.externalTextView = self.textView;
+    streamsObject.externalConnectButton = self.connectButton;
+    streamsObject.externalConnectionStatus = self.connectionStatus;
     [streamsObject connectToRemoteServer:sender hostName:self.hostName portNumber:self.portNumber];
 }
 @end

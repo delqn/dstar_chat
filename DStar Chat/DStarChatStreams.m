@@ -15,8 +15,19 @@ NSMutableData *dataBuffer;
 @implementation DStarChatStreams
 
 @synthesize externalTextView;
+@synthesize externalConnectButton;
+@synthesize externalConnectionStatus;
 
 - (void)connectToRemoteServer:(id)sender hostName:(NSTextField*)hostName portNumber:(NSTextField*)portNumber {
+    
+    if(!(externalTextView && externalConnectButton && externalConnectionStatus)){
+        NSLog(@"Initialize everything first");
+    }
+    
+    if([externalConnectButton.title isEqualToString:@"Disconnect"]){
+        [self close];
+        return;
+    }
     NSHost *host = [NSHost hostWithName:hostName.stringValue];
     NSInputStream *is = inputStream;
     NSOutputStream *os = outputStream;
@@ -33,6 +44,12 @@ NSMutableData *dataBuffer;
     return;
 }
 
+- (void)toggleConnectButtonText:(NSButton*)connectButton title:(NSString*)stringTitle {
+    if(![connectButton.title isEqualToString:stringTitle]) {
+        connectButton.title = stringTitle ;
+    }
+}
+
 - (void)open {
     NSLog(@"Opening streams.");
     [inputStream setDelegate:self];
@@ -42,6 +59,7 @@ NSMutableData *dataBuffer;
     [outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     [inputStream open];
     [outputStream open];
+    [self toggleConnectButtonText:externalConnectButton title:@"Disconnect"];
 }
 
 - (void)close {
@@ -54,12 +72,52 @@ NSMutableData *dataBuffer;
     [outputStream setDelegate:nil];
     inputStream = nil;
     outputStream = nil;
+    [self toggleConnectButtonText:externalConnectButton title:@"Connect"];
 }
 
 - (void)stream:(NSStream *)stream handleEvent:(NSStreamEvent)streamEvent {
+    NSString *statusText = @"";
+    switch (streamEvent) {
+        case NSStreamEventEndEncountered: {
+            statusText = @"Bit Stream Ended";
+            break;
+        }
+        case NSStreamEventHasBytesAvailable: {
+            statusText = @"More Bytes Available";
+            break;
+        }
+        case NSStreamEventNone: {
+            statusText = @"Weird! Nothing Really Happened";
+            break;
+        }
+        case NSStreamEventErrorOccurred: {
+            statusText = @"Error Occurred";
+            break;
+        }
+        case NSStreamEventHasSpaceAvailable: {
+            statusText = @"Has Space Available";
+            break;
+        }
+        case NSStreamEventOpenCompleted: {
+            statusText = @"Open Completed";
+            break;
+        }
+        default: {
+            statusText = @"Hm?";
+            break;
+        }
+    }
+    
+    externalConnectionStatus.stringValue = statusText;
+    
     switch(streamEvent) {
+        case NSStreamEventEndEncountered: {
+            [self toggleConnectButtonText:externalConnectButton title:@"Connect"];
+            break;
+        }
         case NSStreamEventHasSpaceAvailable: {
             if(stream == outputStream) {
+                [self toggleConnectButtonText:externalConnectButton title:@"Disconnect"];
                 NSLog(@"outputStream is ready.");
             }
             break;

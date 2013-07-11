@@ -13,6 +13,8 @@
 }*/
 
 @property NSTextView *externalTextView;
+@property NSButton *externalConnectButton;
+@property NSTextField *externalConnectionStatus;
 
 - (void)open;
 - (void)close;
