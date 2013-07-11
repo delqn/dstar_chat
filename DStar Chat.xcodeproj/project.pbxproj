@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B9BBBE72178E943A00CFA800 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BBBE71178E943A00CFA800 /* Cocoa.framework */; };
+		B9BBBE7C178E943A00CFA800 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9BBBE7A178E943A00CFA800 /* InfoPlist.strings */; };
+		B9BBBE7E178E943A00CFA800 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BBBE7D178E943A00CFA800 /* main.m */; };
+		B9BBBE82178E943A00CFA800 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9BBBE80178E943A00CFA800 /* Credits.rtf */; };
+		B9BBBE85178E943A00CFA800 /* DStarChatAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BBBE84178E943A00CFA800 /* DStarChatAppDelegate.m */; };
+		B9BBBE88178E943A00CFA800 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9BBBE86178E943A00CFA800 /* MainMenu.xib */; };
+		B9BBBE8B178E943A00CFA800 /* DStar_Chat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9BBBE89178E943A00CFA800 /* DStar_Chat.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B9BBBE6E178E943A00CFA800 /* DStar Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DStar Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9BBBE71178E943A00CFA800 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B9BBBE74178E943A00CFA800 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B9BBBE75178E943A00CFA800 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B9BBBE76178E943A00CFA800 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B9BBBE79178E943A00CFA800 /* DStar Chat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DStar Chat-Info.plist"; sourceTree = "<group>"; };
+		B9BBBE7B178E943A00CFA800 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B9BBBE7D178E943A00CFA800 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B9BBBE7F178E943A00CFA800 /* DStar Chat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DStar Chat-Prefix.pch"; sourceTree = "<group>"; };
+		B9BBBE81178E943A00CFA800 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		B9BBBE83178E943A00CFA800 /* DStarChatAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarChatAppDelegate.h; sourceTree = "<group>"; };
+		B9BBBE84178E943A00CFA800 /* DStarChatAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DStarChatAppDelegate.m; sourceTree = "<group>"; };
+		B9BBBE87178E943A00CFA800 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9BBBE8A178E943A00CFA800 /* DStar_Chat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DStar_Chat.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9BBBE6B178E943A00CFA800 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9BBBE72178E943A00CFA800 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B9BBBE65178E943A00CFA800 = {
+			isa = PBXGroup;
+			children = (
+				B9BBBE77178E943A00CFA800 /* DStar Chat */,
+				B9BBBE70178E943A00CFA800 /* Frameworks */,
+				B9BBBE6F178E943A00CFA800 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B9BBBE6F178E943A00CFA800 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9BBBE6E178E943A00CFA800 /* DStar Chat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9BBBE70178E943A00CFA800 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9BBBE71178E943A00CFA800 /* Cocoa.framework */,
+				B9BBBE73178E943A00CFA800 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9BBBE73178E943A00CFA800 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9BBBE74178E943A00CFA800 /* AppKit.framework */,
+				B9BBBE75178E943A00CFA800 /* CoreData.framework */,
+				B9BBBE76178E943A00CFA800 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B9BBBE77178E943A00CFA800 /* DStar Chat */ = {
+			isa = PBXGroup;
+			children = (
+				B9BBBE83178E943A00CFA800 /* DStarChatAppDelegate.h */,
+				B9BBBE84178E943A00CFA800 /* DStarChatAppDelegate.m */,
+				B9BBBE86178E943A00CFA800 /* MainMenu.xib */,
+				B9BBBE89178E943A00CFA800 /* DStar_Chat.xcdatamodeld */,
+				B9BBBE78178E943A00CFA800 /* Supporting Files */,
+			);
+			path = "DStar Chat";
+			sourceTree = "<group>";
+		};
+		B9BBBE78178E943A00CFA800 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9BBBE79178E943A00CFA800 /* DStar Chat-Info.plist */,
+				B9BBBE7A178E943A00CFA800 /* InfoPlist.strings */,
+				B9BBBE7D178E943A00CFA800 /* main.m */,
+				B9BBBE7F178E943A00CFA800 /* DStar Chat-Prefix.pch */,
+				B9BBBE80178E943A00CFA800 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9BBBE6D178E943A00CFA800 /* DStar Chat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9BBBE8E178E943A00CFA800 /* Build configuration list for PBXNativeTarget "DStar Chat" */;
+			buildPhases = (
+				B9BBBE6A178E943A00CFA800 /* Sources */,
+				B9BBBE6B178E943A00CFA800 /* Frameworks */,
+				B9BBBE6C178E943A00CFA800 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DStar Chat";
+			productName = "DStar Chat";
+			productReference = B9BBBE6E178E943A00CFA800 /* DStar Chat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9BBBE66178E943A00CFA800 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DStarChat;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Delyan Raychev";
+			};
+			buildConfigurationList = B9BBBE69178E943A00CFA800 /* Build configuration list for PBXProject "DStar Chat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B9BBBE65178E943A00CFA800;
+			productRefGroup = B9BBBE6F178E943A00CFA800 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9BBBE6D178E943A00CFA800 /* DStar Chat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9BBBE6C178E943A00CFA800 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9BBBE7C178E943A00CFA800 /* InfoPlist.strings in Resources */,
+				B9BBBE82178E943A00CFA800 /* Credits.rtf in Resources */,
+				B9BBBE88178E943A00CFA800 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9BBBE6A178E943A00CFA800 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9BBBE7E178E943A00CFA800 /* main.m in Sources */,
+				B9BBBE85178E943A00CFA800 /* DStarChatAppDelegate.m in Sources */,
+				B9BBBE8B178E943A00CFA800 /* DStar_Chat.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B9BBBE7A178E943A00CFA800 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9BBBE7B178E943A00CFA800 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B9BBBE80178E943A00CFA800 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9BBBE81178E943A00CFA800 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		B9BBBE86178E943A00CFA800 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9BBBE87178E943A00CFA800 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B9BBBE8C178E943A00CFA800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B9BBBE8D178E943A00CFA800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B9BBBE8F178E943A00CFA800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DStar Chat/DStar Chat-Prefix.pch";
+				INFOPLIST_FILE = "DStar Chat/DStar Chat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B9BBBE90178E943A00CFA800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DStar Chat/DStar Chat-Prefix.pch";
+				INFOPLIST_FILE = "DStar Chat/DStar Chat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9BBBE69178E943A00CFA800 /* Build configuration list for PBXProject "DStar Chat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9BBBE8C178E943A00CFA800 /* Debug */,
+				B9BBBE8D178E943A00CFA800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9BBBE8E178E943A00CFA800 /* Build configuration list for PBXNativeTarget "DStar Chat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9BBBE8F178E943A00CFA800 /* Debug */,
+				B9BBBE90178E943A00CFA800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B9BBBE89178E943A00CFA800 /* DStar_Chat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B9BBBE8A178E943A00CFA800 /* DStar_Chat.xcdatamodel */,
+			);
+			currentVersion = B9BBBE8A178E943A00CFA800 /* DStar_Chat.xcdatamodel */;
+			path = DStar_Chat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B9BBBE66178E943A00CFA800 /* Project object */;
+}
