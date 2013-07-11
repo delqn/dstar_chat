@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DStarChatStreams: NSObject <NSStreamDelegate> {
-    @private
-    NSTextView *externalTextView;
-}
+@interface DStarChatStreams: NSObject <NSStreamDelegate> /*{
+    @private NSTextView *externalTextView;
+}*/
 
-- (id)initWithTextView:(NSTextView*)textView;
+@property NSTextView *externalTextView;
+
 - (void)open;
 - (void)close;
 - (void)stream:(NSStream *)stream handleEvent:(NSStreamEvent)event;
 - (void)readIn:(NSString *)s;
 - (void)writeOut:(NSString *)s;
-- (IBAction)connectToRemoteServer:(id)sender;
+- (void)connectToRemoteServer:(id)sender hostName:(NSTextField*)hostNumber portNumber:(NSTextField*)portNumber;
 @end

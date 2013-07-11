@@ -17,8 +17,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    streamsObject = [[DStarChatStreams alloc] initWithTextView:self.textView];
-    [streamsObject connectToRemoteServer:nil];
+    streamsObject = [[DStarChatStreams alloc] init];
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.raychev.DStar_Chat" in the user's Application Support directory.
@@ -183,7 +182,7 @@
 }
 
 -(IBAction)connect:(id)sender{
-    DStarChatStreams* s = [[DStarChatStreams alloc] init];
-    [s connectToRemoteServer:sender];
+    streamsObject.externalTextView = self.textView;
+    [streamsObject connectToRemoteServer:sender hostName:self.hostName portNumber:self.portNumber];
 }
 @end

@@ -16,6 +16,8 @@
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSTextView *textView;
+@property (assign) IBOutlet NSTextField *hostName;
+@property (assign) IBOutlet NSTextField *portNumber;
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

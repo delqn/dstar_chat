@@ -14,18 +14,16 @@ NSMutableData *dataBuffer;
 
 @implementation DStarChatStreams
 
-- (id)initWithTextView:(NSTextView*)textView{
-    self = [super init];
-    externalTextView = textView;
-    return self;
-}
+@synthesize externalTextView;
 
-- (IBAction)connectToRemoteServer:(id)sender {
-    NSHost *host = [NSHost hostWithName:@"ref.d-rats.com"];
+- (void)connectToRemoteServer:(id)sender hostName:(NSTextField*)hostName portNumber:(NSTextField*)portNumber {
+    NSHost *host = [NSHost hostWithName:hostName.stringValue];
     NSInputStream *is = inputStream;
     NSOutputStream *os = outputStream;
+    NSLog(@"Host name: %@", hostName.stringValue);
+    NSLog(@"Port number: %li", [portNumber.stringValue intValue]);
     [NSStream getStreamsToHost:host
-                          port:9000
+                          port:[portNumber.stringValue intValue]
                    inputStream:&is
                   outputStream:&os];
     inputStream = is;
