@@ -185,6 +185,8 @@
     streamsObject.externalTextView = self.textView;
     streamsObject.externalConnectButton = self.connectButton;
     streamsObject.externalConnectionStatus = self.connectionStatus;
-    [streamsObject connectToRemoteServer:sender hostName:self.hostName portNumber:self.portNumber];
+    streamsObject.hostName = self.hostName.stringValue;
+    streamsObject.portNumber = [self.portNumber.stringValue integerValue];
+    [streamsObject connectToRemoteServer:sender];
 }
 @end

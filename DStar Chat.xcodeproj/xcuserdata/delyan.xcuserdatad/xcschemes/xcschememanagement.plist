@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>DStarChatUnitTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>B9BBBE6D178E943A00CFA800</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B9E684FA178F879E0006C6B6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -28,6 +28,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B9E684FA178F879E0006C6B6"
+               BuildableName = "DStarChatUnitTests.octest"
+               BlueprintName = "DStarChatUnitTests"
+               ReferencedContainer = "container:DStar Chat.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -17,8 +17,10 @@ NSMutableData *dataBuffer;
 @synthesize externalTextView;
 @synthesize externalConnectButton;
 @synthesize externalConnectionStatus;
+@synthesize portNumber;
+@synthesize hostName;
 
-- (void)connectToRemoteServer:(id)sender hostName:(NSTextField*)hostName portNumber:(NSTextField*)portNumber {
+- (void)connectToRemoteServer:(id)sender {
     
     if(!(externalTextView && externalConnectButton && externalConnectionStatus)){
         NSLog(@"Initialize everything first");
@@ -28,13 +30,13 @@ NSMutableData *dataBuffer;
         [self close];
         return;
     }
-    NSHost *host = [NSHost hostWithName:hostName.stringValue];
+    NSHost *host = [NSHost hostWithName:hostName];
     NSInputStream *is = inputStream;
     NSOutputStream *os = outputStream;
-    NSLog(@"Host name: %@", hostName.stringValue);
-    NSLog(@"Port number: %li", [portNumber.stringValue intValue]);
+    NSLog(@"Host name: %@", hostName);
+    NSLog(@"Port number: %li", portNumber);
     [NSStream getStreamsToHost:host
-                          port:[portNumber.stringValue intValue]
+                          port:portNumber
                    inputStream:&is
                   outputStream:&os];
     inputStream = is;
@@ -75,8 +77,9 @@ NSMutableData *dataBuffer;
     [self toggleConnectButtonText:externalConnectButton title:@"Connect"];
 }
 
-- (void)stream:(NSStream *)stream handleEvent:(NSStreamEvent)streamEvent {
+- (void)updateStatusLabel:(NSStreamEvent)streamEvent {
     NSString *statusText = @"";
+    
     switch (streamEvent) {
         case NSStreamEventEndEncountered: {
             statusText = @"Bit Stream Ended";
@@ -107,9 +110,11 @@ NSMutableData *dataBuffer;
             break;
         }
     }
-    
     externalConnectionStatus.stringValue = statusText;
-    
+}
+
+- (void)stream:(NSStream *)stream handleEvent:(NSStreamEvent)streamEvent {
+    [self updateStatusLabel:streamEvent];
     switch(streamEvent) {
         case NSStreamEventEndEncountered: {
             [self toggleConnectButtonText:externalConnectButton title:@"Connect"];

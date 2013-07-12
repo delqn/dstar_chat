@@ -15,7 +15,21 @@
 		B9BBBE8B178E943A00CFA800 /* DStar_Chat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9BBBE89178E943A00CFA800 /* DStar_Chat.xcdatamodeld */; };
 		B9BBBE99178EA92800CFA800 /* DStarChatStreams.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BBBE98178EA92800CFA800 /* DStarChatStreams.m */; };
 		B9BBBE9B178F1C7300CFA800 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9BBBE9A178F1C7300CFA800 /* MainMenu.xib */; };
+		B9E684FD178F879E0006C6B6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E684FC178F879E0006C6B6 /* SenTestingKit.framework */; };
+		B9E684FE178F879E0006C6B6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BBBE71178E943A00CFA800 /* Cocoa.framework */; };
+		B9E68504178F879E0006C6B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9E68502178F879E0006C6B6 /* InfoPlist.strings */; };
+		B9E68507178F879E0006C6B6 /* DStarChatUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E68506178F879E0006C6B6 /* DStarChatUnitTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B9E6850C178F89B10006C6B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9BBBE66178E943A00CFA800 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9E684FA178F879E0006C6B6;
+			remoteInfo = DStarChatUnitTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B9BBBE6E178E943A00CFA800 /* DStar Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DStar Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +48,13 @@
 		B9BBBE97178EA92800CFA800 /* DStarChatStreams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DStarChatStreams.h; sourceTree = "<group>"; };
 		B9BBBE98178EA92800CFA800 /* DStarChatStreams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DStarChatStreams.m; sourceTree = "<group>"; };
 		B9BBBE9A178F1C7300CFA800 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		B9E684FB178F879E0006C6B6 /* DStarChatUnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DStarChatUnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9E684FC178F879E0006C6B6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B9E68501178F879E0006C6B6 /* DStarChatUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DStarChatUnitTests-Info.plist"; sourceTree = "<group>"; };
+		B9E68503178F879E0006C6B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B9E68505178F879E0006C6B6 /* DStarChatUnitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarChatUnitTests.h; sourceTree = "<group>"; };
+		B9E68506178F879E0006C6B6 /* DStarChatUnitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DStarChatUnitTests.m; sourceTree = "<group>"; };
+		B9E68508178F879E0006C6B6 /* DStarChatUnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DStarChatUnitTests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +66,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B9E684F7178F879E0006C6B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9E684FD178F879E0006C6B6 /* SenTestingKit.framework in Frameworks */,
+				B9E684FE178F879E0006C6B6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -52,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				B9BBBE77178E943A00CFA800 /* DStar Chat */,
+				B9E684FF178F879E0006C6B6 /* DStarChatUnitTests */,
 				B9BBBE70178E943A00CFA800 /* Frameworks */,
 				B9BBBE6F178E943A00CFA800 /* Products */,
 			);
@@ -61,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				B9BBBE6E178E943A00CFA800 /* DStar Chat.app */,
+				B9E684FB178F879E0006C6B6 /* DStarChatUnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				B9BBBE71178E943A00CFA800 /* Cocoa.framework */,
+				B9E684FC178F879E0006C6B6 /* SenTestingKit.framework */,
 				B9BBBE73178E943A00CFA800 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -110,6 +143,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B9E684FF178F879E0006C6B6 /* DStarChatUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				B9E68505178F879E0006C6B6 /* DStarChatUnitTests.h */,
+				B9E68506178F879E0006C6B6 /* DStarChatUnitTests.m */,
+				B9E68500178F879E0006C6B6 /* Supporting Files */,
+			);
+			path = DStarChatUnitTests;
+			sourceTree = "<group>";
+		};
+		B9E68500178F879E0006C6B6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9E68501178F879E0006C6B6 /* DStarChatUnitTests-Info.plist */,
+				B9E68502178F879E0006C6B6 /* InfoPlist.strings */,
+				B9E68508178F879E0006C6B6 /* DStarChatUnitTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,11 +177,30 @@
 			buildRules = (
 			);
 			dependencies = (
+				B9E6850D178F89B10006C6B6 /* PBXTargetDependency */,
 			);
 			name = "DStar Chat";
 			productName = "DStar Chat";
 			productReference = B9BBBE6E178E943A00CFA800 /* DStar Chat.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B9E684FA178F879E0006C6B6 /* DStarChatUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9E6850B178F879E0006C6B6 /* Build configuration list for PBXNativeTarget "DStarChatUnitTests" */;
+			buildPhases = (
+				B9E684F6178F879E0006C6B6 /* Sources */,
+				B9E684F7178F879E0006C6B6 /* Frameworks */,
+				B9E684F8178F879E0006C6B6 /* Resources */,
+				B9E684F9178F879E0006C6B6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DStarChatUnitTests;
+			productName = DStarChatUnitTests;
+			productReference = B9E684FB178F879E0006C6B6 /* DStarChatUnitTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -153,6 +225,7 @@
 			projectRoot = "";
 			targets = (
 				B9BBBE6D178E943A00CFA800 /* DStar Chat */,
+				B9E684FA178F879E0006C6B6 /* DStarChatUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -168,7 +241,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B9E684F8178F879E0006C6B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9E68504178F879E0006C6B6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B9E684F9178F879E0006C6B6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9BBBE6A178E943A00CFA800 /* Sources */ = {
@@ -182,7 +279,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B9E684F6178F879E0006C6B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9E68507178F879E0006C6B6 /* DStarChatUnitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B9E6850D178F89B10006C6B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9E684FA178F879E0006C6B6 /* DStarChatUnitTests */;
+			targetProxy = B9E6850C178F89B10006C6B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B9BBBE7A178E943A00CFA800 /* InfoPlist.strings */ = {
@@ -199,6 +312,14 @@
 				B9BBBE81178E943A00CFA800 /* en */,
 			);
 			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		B9E68502178F879E0006C6B6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9E68503178F879E0006C6B6 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -287,6 +408,36 @@
 			};
 			name = Release;
 		};
+		B9E68509178F879E0006C6B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DStar Chat.app/Contents/MacOS/DStar Chat";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DStarChatUnitTests/DStarChatUnitTests-Prefix.pch";
+				INFOPLIST_FILE = "DStarChatUnitTests/DStarChatUnitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B9E6850A178F879E0006C6B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DStar Chat.app/Contents/MacOS/DStar Chat";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DStarChatUnitTests/DStarChatUnitTests-Prefix.pch";
+				INFOPLIST_FILE = "DStarChatUnitTests/DStarChatUnitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -304,6 +455,15 @@
 			buildConfigurations = (
 				B9BBBE8F178E943A00CFA800 /* Debug */,
 				B9BBBE90178E943A00CFA800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9E6850B178F879E0006C6B6 /* Build configuration list for PBXNativeTarget "DStarChatUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9E68509178F879E0006C6B6 /* Debug */,
+				B9E6850A178F879E0006C6B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
