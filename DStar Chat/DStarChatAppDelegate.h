@@ -20,12 +20,11 @@
 @property (assign) IBOutlet NSTextField *portNumber;
 @property (assign) IBOutlet NSButton *connectButton;
 @property (assign) IBOutlet NSTextField *connectionStatus;
+@property (assign) IBOutlet NSTableColumn *column;
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-//@property DStarChatStreams *stream;
-
     
 - (IBAction)saveAction:(id)sender;
 

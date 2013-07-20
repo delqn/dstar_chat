@@ -19,10 +19,11 @@
 		B9E684FE178F879E0006C6B6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BBBE71178E943A00CFA800 /* Cocoa.framework */; };
 		B9E68504178F879E0006C6B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9E68502178F879E0006C6B6 /* InfoPlist.strings */; };
 		B9E68507178F879E0006C6B6 /* DStarChatUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E68506178F879E0006C6B6 /* DStarChatUnitTests.m */; };
+		B9FB3238179A4B6100561A06 /* DStarChatMessageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FB3237179A4B6100561A06 /* DStarChatMessageParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B9E6850C178F89B10006C6B6 /* PBXContainerItemProxy */ = {
+		B9FB3239179A52CA00561A06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B9BBBE66178E943A00CFA800 /* Project object */;
 			proxyType = 1;
@@ -55,6 +56,8 @@
 		B9E68505178F879E0006C6B6 /* DStarChatUnitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarChatUnitTests.h; sourceTree = "<group>"; };
 		B9E68506178F879E0006C6B6 /* DStarChatUnitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DStarChatUnitTests.m; sourceTree = "<group>"; };
 		B9E68508178F879E0006C6B6 /* DStarChatUnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DStarChatUnitTests-Prefix.pch"; sourceTree = "<group>"; };
+		B9FB3236179A4B6100561A06 /* DStarChatMessageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DStarChatMessageParser.h; sourceTree = "<group>"; };
+		B9FB3237179A4B6100561A06 /* DStarChatMessageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DStarChatMessageParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 				B9BBBE78178E943A00CFA800 /* Supporting Files */,
 				B9BBBE97178EA92800CFA800 /* DStarChatStreams.h */,
 				B9BBBE98178EA92800CFA800 /* DStarChatStreams.m */,
+				B9FB3236179A4B6100561A06 /* DStarChatMessageParser.h */,
+				B9FB3237179A4B6100561A06 /* DStarChatMessageParser.m */,
 			);
 			path = "DStar Chat";
 			sourceTree = "<group>";
@@ -177,7 +182,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				B9E6850D178F89B10006C6B6 /* PBXTargetDependency */,
+				B9FB323A179A52CA00561A06 /* PBXTargetDependency */,
 			);
 			name = "DStar Chat";
 			productName = "DStar Chat";
@@ -276,6 +281,7 @@
 				B9BBBE85178E943A00CFA800 /* DStarChatAppDelegate.m in Sources */,
 				B9BBBE8B178E943A00CFA800 /* DStar_Chat.xcdatamodeld in Sources */,
 				B9BBBE99178EA92800CFA800 /* DStarChatStreams.m in Sources */,
+				B9FB3238179A4B6100561A06 /* DStarChatMessageParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,10 +296,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B9E6850D178F89B10006C6B6 /* PBXTargetDependency */ = {
+		B9FB323A179A52CA00561A06 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B9E684FA178F879E0006C6B6 /* DStarChatUnitTests */;
-			targetProxy = B9E6850C178F89B10006C6B6 /* PBXContainerItemProxy */;
+			targetProxy = B9FB3239179A52CA00561A06 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -466,6 +472,7 @@
 				B9E6850A178F879E0006C6B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

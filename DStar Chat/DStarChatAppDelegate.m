@@ -13,11 +13,15 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
+@synthesize column = _column;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
     streamsObject = [[DStarChatStreams alloc] init];
+    
+    NSTextFieldCell *cell = [[NSTextFieldCell alloc] initTextCell:@"blehh"];
+    [self.column insertValue:cell atIndex:0 inPropertyWithKey:@"index_here"];
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.raychev.DStar_Chat" in the user's Application Support directory.
